@@ -66,7 +66,9 @@ export default function ToDoScreen({ navigation }: any) {
       <Button title="Adicionar tarefa" color={'#123456'} onPress={adicionarTarefa} />
       {mostrarTarefas()}
       <StatusBar style="auto" />
+      <Button  title="Ir para buscaCEP" onPress={() => navigation.navigate('buscacep')}/>
     </View>
+    
   );
 }
 
