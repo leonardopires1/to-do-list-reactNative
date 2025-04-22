@@ -4,6 +4,7 @@ import { _tarefa } from "../types/_tarefa";
 interface tarefaProps {
     dados: _tarefa;
     handleDeletePress: (id: number) => void;
+    key: number;
 }
 
 export default function Tarefa (props: tarefaProps) {
@@ -27,7 +28,7 @@ export default function Tarefa (props: tarefaProps) {
     });
 
     return (
-        <View key={props.dados.id} style={styles.tarefaContainer}>
+        <View style={styles.tarefaContainer}>
             <Text style={styles.texto}>{props.dados.texto}</Text>
             <Button title="Excluir" color={'red'} onPress={() => props.handleDeletePress(props.dados.id)}/>
         </View>
